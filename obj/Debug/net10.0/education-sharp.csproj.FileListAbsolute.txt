@@ -1,0 +1,14 @@
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/bin/Debug/net10.0/education-sharp
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/bin/Debug/net10.0/education-sharp.deps.json
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/bin/Debug/net10.0/education-sharp.runtimeconfig.json
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/bin/Debug/net10.0/education-sharp.dll
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/bin/Debug/net10.0/education-sharp.pdb
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.AssemblyInfoInputs.cache
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.AssemblyInfo.cs
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.csproj.CoreCompileInputs.cache
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.dll
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/refint/education-sharp.dll
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.pdb
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/education-sharp.genruntimeconfig.cache
+/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/Debug/net10.0/ref/education-sharp.dll
