@@ -7,23 +7,19 @@ namespace education_sharp;
 public static class Lab2
 {
     private const int OneYearDeposit = 1;
-    private const int ThreeYearDeposit = 3;
-    private const int FiveYearDeposit = 5;
-    
+    private const double OneYearDepositPercent = 0.07;
+    private const int ThreeYearDeposit = 2;
+    private const double ThreeYearDepositPercent = 0.08;
+    private const int FiveYearDeposit = 3;
+    private const double FiveYearDepositPercent = 0.1;
+    private const int MaxSpeed = 90;
+
     public static void Task1()
     {
         Console.Write("На каком месте стоит Сережа? ");
         string? n = Console.ReadLine();
-        try
-        {
-            int validatedN = Helper.TryParseStringToInt(n);
-            Console.WriteLine(validatedN % 2 == 0 ? "Второй" : "Первый");
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine($"Error: {e.Message}");
-            throw;
-        }
+        int validatedN = Helper.TryParseStringToInt(n, false);
+        Console.WriteLine(validatedN % 2 == 0 ? "Второй" : "Первый");
     }
 
     public static void Task2()
@@ -34,7 +30,7 @@ public static class Lab2
             Console.WriteLine("sides is invalid");
             return;
         }
-        
+
         sides.Sort();
         if (!IsRightAngledTriangle(sides))
         {
@@ -50,13 +46,13 @@ public static class Lab2
     {
         Console.Write("Номер Сергея в очереди: ");
         string? number = Console.ReadLine();
-        int parsedInt = Helper.TryParseStringToInt(number);
+        int parsedInt = Helper.TryParseStringToInt(number, false);
 
         TimeSpan startTime = TimeSpan.ParseExact("9:00", @"h\:mm", CultureInfo.InvariantCulture);
-        TimeSpan endTime   = TimeSpan.ParseExact("17:00", @"h\:mm", CultureInfo.InvariantCulture);
+        TimeSpan endTime = TimeSpan.ParseExact("17:00", @"h\:mm", CultureInfo.InvariantCulture);
 
-        TimeSpan checkTime = startTime.Add(TimeSpan.FromMinutes(20 * parsedInt - 1));
-        if (checkTime <= endTime)
+        TimeSpan checkTime = startTime.Add(TimeSpan.FromMinutes(20 * ((parsedInt / 2) - 2)));
+        if (checkTime <= endTime.Subtract(TimeSpan.FromMinutes(20)))
         {
             Console.WriteLine($"Очередь Сергея настанет в {checkTime}");
         }
@@ -64,7 +60,7 @@ public static class Lab2
         {
             Console.WriteLine("Сергею лучше пойти домой");
         }
-        
+
     }
 
     public static void Task4()
@@ -74,10 +70,10 @@ public static class Lab2
         Console.WriteLine();
         Console.Write("Введие сумму вклада ");
         string? deposit = Console.ReadLine();
-        int parsedNumber = Helper.TryParseStringToInt(number);
-        double parsedDeposit = Helper.TryParseStringToDouble(deposit);
+        int parsedNumber = Helper.TryParseStringToInt(number, false);
+        double parsedDeposit = Helper.TryParseStringToDouble(deposit, false);
 
-        double countedDeposit = CountDeposit(parsedNumber, parsedDeposit);
+        double countedDeposit = CountDeposit(parsedNumber, ref parsedDeposit);
         Console.WriteLine($"Вклад: {countedDeposit}");
     }
 
@@ -85,17 +81,18 @@ public static class Lab2
     {
         Console.WriteLine("Введите скорость ");
         string? speed = Console.ReadLine();
-        int parsedSpeed = Helper.TryParseStringToInt(speed);
+        int parsedSpeed = Helper.TryParseStringToInt(speed, false);
+        int substraction = parsedSpeed - MaxSpeed;
 
-        switch (parsedSpeed - 90)
+        switch (substraction)
         {
-            case >= 20 when  parsedSpeed < 40:
+            case >= 20 when substraction < 40:
                 Console.WriteLine("500 рублей штраф");
                 break;
-            case >= 40 when  parsedSpeed < 60:
+            case >= 40 when substraction < 60:
                 Console.WriteLine("1500 рублей штраф");
                 break;
-            case >= 60 when parsedSpeed < 80:
+            case >= 60 when substraction < 80:
                 Console.WriteLine("2500 рублей штраф");
                 break;
             case >= 80:
@@ -106,10 +103,10 @@ public static class Lab2
                 return;
         }
     }
-    
+
     private static bool IsRightAngledTriangle(double[] sortedSides)
     {
-        return Math.Pow(sortedSides[2], 2) == Math.Pow(sortedSides[0], 2) + Math.Pow(sortedSides[1], 2); 
+        return Math.Pow(sortedSides[2], 2) == Math.Pow(sortedSides[0], 2) + Math.Pow(sortedSides[1], 2);
     }
 
     private static double FindCAngle(double[] sides)
@@ -117,24 +114,24 @@ public static class Lab2
         double cos = (sides[0] * sides[0] + sides[1] * sides[1] - sides[2] * sides[2]) / (2 * sides[0] * sides[1]);
         return Math.Acos(cos) * 180.0 / Math.PI;
     }
-    
-    private static double CountDeposit(int typeDeposit, double deposit) 
+
+    private static double CountDeposit(int typeDeposit, ref double deposit)
     {
         switch (typeDeposit)
         {
             case OneYearDeposit:
-                return deposit + 0.07 * deposit;
+                return deposit + OneYearDepositPercent * deposit;
             case ThreeYearDeposit:
                 for (int i = 0; i < 3; i++)
                 {
-                    deposit += 0.08 * deposit;
+                    deposit += ThreeYearDepositPercent * deposit;
                 }
 
                 return deposit;
             case FiveYearDeposit:
                 for (int i = 0; i < 5; i++)
                 {
-                    deposit += 0.1 * deposit;
+                    deposit += FiveYearDepositPercent * deposit;
                 }
 
                 return deposit;

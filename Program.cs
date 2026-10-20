@@ -1,25 +1,12 @@
 ﻿using System;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace education_sharp;
 
 public static class Program
 {
-    public interface ISome
-    {
-        void Hi()
-        {
-            Console.WriteLine("Hi");
-        }
-    }
 
-    class Some : ISome
-    {
-        public void Hi()
-        {
-            Console.WriteLine("Hello");
-        }
-    }
-    
     public static void Main(string[] args)
     {
         // Lab.Task1();
@@ -41,14 +28,15 @@ public static class Program
 
         try
         {
-            ExecuteLab2();
+            ExecuteLab4();
         }
-        catch
+        catch (Exception e)
         {
+            Console.WriteLine($"Error: {e.Message}");
             return;
         }
     }
-    
+
     private static void ExecuteLab2()
     {
         Lab2.Task1();
@@ -56,5 +44,36 @@ public static class Program
         Lab2.Task3();
         Lab2.Task4();
         Lab2.Task5();
+    }
+
+    private static void ExecuteLab3()
+    {
+        Lab3.Task1();
+        Lab3.Task2();
+        Lab3.Task3();
+        Lab3.Task4();
+        Lab3.Task5();
+        Lab3.Task6();
+    }
+
+    private static void ExecuteLab3_2()
+    {
+        Lab3_2.Task1();
+        Lab3_2.Task2();
+        Lab3_2.Task3();
+        Lab3_2.Task4();
+        Lab3_2.Task5();
+        Lab3_2.Task6();
+        Lab3_2.Task7();
+        Lab3_2.Task8();
+        Lab3_2.Task9();
+    }
+
+    private static void ExecuteLab4()
+    {
+        Lab4.Task1();
+        Lab4.Task2();
+        Lab4.Task3();
+        Console.WriteLine(Lab4.Task4());
     }
 }

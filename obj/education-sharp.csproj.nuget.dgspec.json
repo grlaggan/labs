@@ -1,26 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/education-sharp.csproj": {}
+    "C:\\Users\\solod\\Documents\\dev\\labs\\education-sharp.csproj": {}
   },
   "projects": {
-    "/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/education-sharp.csproj": {
+    "C:\\Users\\solod\\Documents\\dev\\labs\\education-sharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/education-sharp.csproj",
+        "projectUniqueName": "C:\\Users\\solod\\Documents\\dev\\labs\\education-sharp.csproj",
         "projectName": "education-sharp",
-        "projectPath": "/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/education-sharp.csproj",
-        "packagesPath": "/home/furuta/.nuget/packages/",
-        "outputPath": "/home/furuta/Documents/dev/rest-api/education-sharp/education-sharp/obj/",
+        "projectPath": "C:\\Users\\solod\\Documents\\dev\\labs\\education-sharp.csproj",
+        "packagesPath": "C:\\Users\\solod\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\solod\\Documents\\dev\\labs\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/furuta/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\solod\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/usr/lib64/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net10.0": {
@@ -62,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib64/dotnet/sdk/10.0.111/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
