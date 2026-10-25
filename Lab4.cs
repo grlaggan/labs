@@ -41,7 +41,7 @@ static class Lab4
         Console.Write("Введите сумму: ");
         int sum = Helper.TryParseStringToInt(Console.ReadLine(), false);
 
-        if (userName is null)
+        if (string.IsNullOrEmpty(userName))
         {
             throw new InvalidDataException("Имя пользователя не может быть пустым.");
         }
