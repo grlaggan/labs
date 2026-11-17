@@ -199,6 +199,36 @@ public class Arena
 
         while (AllieseWizards.Count > 0 && EnemyWizards.Count > 0)
         {
+            if (isFirstAlliesStep)
+            {
+                var allieseWizard = AllieseWizards[0];
+                var enemyWizard = EnemyWizards[Math.Min(0, EnemyWizards.Count - 1)];
+
+                bool isKilled = allieseWizard.UseUltimate(enemyWizard);
+                isFirstAlliesStep = false;
+                PrintSpecialAbility(true, 1, allieseWizard, isKilled);
+                if (isKilled)
+                {
+                    EnemyWizards.RemoveAt(0);
+                }
+                continue;
+            }
+
+            if (isFirstEnemyStep)
+            {
+                var enemyWizard = EnemyWizards[0];
+                var allieseWizard = AllieseWizards[Math.Min(0, AllieseWizards.Count - 1)];
+
+                bool isKilled = enemyWizard.UseUltimate(allieseWizard);
+                isFirstEnemyStep = false;
+                PrintSpecialAbility(false, 1, enemyWizard, isKilled);
+                if (isKilled)
+                {
+                    AllieseWizards.RemoveAt(0);
+                }
+                continue;
+            }
+
             int currentWizardNumber = lastWizardNumber % 4 + 1;
 
             if (currentWizardNumber <= 2)
@@ -208,26 +238,12 @@ public class Arena
                 
                 var allieseWizard = AllieseWizards[wizardIndex];
                 var enemyWizard = EnemyWizards[targetIndex];
-
-                if (isFirstAlliesStep)
+                
+                bool isKilled = allieseWizard.Attack(enemyWizard);
+                PrintAttack(true, currentWizardNumber, allieseWizard, enemyWizard, isKilled);
+                if (isKilled)
                 {
-                    bool isKilled = allieseWizard.UseUltimate(enemyWizard);
-                    isFirstAlliesStep = false;
-                    PrintSpecialAbility(true, currentWizardNumber, allieseWizard, isKilled);
-                    if (isKilled)
-                    {
-                        EnemyWizards.RemoveAt(targetIndex);
-                    }
-                }
-
-                else
-                {
-                    bool isKilled = allieseWizard.Attack(enemyWizard);
-                    PrintAttack(true, currentWizardNumber, allieseWizard, enemyWizard, isKilled);
-                    if (isKilled)
-                    {
-                        EnemyWizards.RemoveAt(targetIndex);
-                    }
+                    EnemyWizards.RemoveAt(targetIndex);
                 }
             }
             else
@@ -237,24 +253,11 @@ public class Arena
                 var enemyWizard = EnemyWizards[wizardIndex];
                 var allieseWizard = AllieseWizards[targetIndex];
 
-                if (isFirstEnemyStep)
+                bool isKilled = enemyWizard.Attack(allieseWizard);
+                PrintAttack(false, currentWizardNumber, enemyWizard, allieseWizard, isKilled);
+                if (isKilled)
                 {
-                    bool isKilled = enemyWizard.UseUltimate(allieseWizard);
-                    isFirstEnemyStep = false;
-                    PrintSpecialAbility(false, currentWizardNumber, enemyWizard, isKilled);
-                    if (isKilled)
-                    {
-                        AllieseWizards.RemoveAt(targetIndex);
-                    }
-                }
-                else
-                {
-                    bool isKilled = enemyWizard.Attack(allieseWizard);
-                    PrintAttack(false, currentWizardNumber, enemyWizard, allieseWizard, isKilled);
-                    if (isKilled)
-                    {
-                        AllieseWizards.RemoveAt(targetIndex);
-                    }
+                    AllieseWizards.RemoveAt(targetIndex);
                 }
             }
 
