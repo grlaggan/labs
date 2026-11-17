@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\solod\\Documents\\dev\\labs\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\lab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:lab5_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\lab6_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:lab6_1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\lab4_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:lab4_2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\lab2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\lab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:lab.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|c:\\users\\solod\\documents\\dev\\labs\\helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{161F6F54-4438-6D58-BDC7-FA2B57771072}|education-sharp.csproj|solutionrelative:helper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,48 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Lab.cs",
-              "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab.cs",
-              "RelativeDocumentMoniker": "Lab.cs",
-              "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab.cs",
-              "RelativeToolTip": "Lab.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Lab5_2.cs",
+              "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab5_2.cs",
+              "RelativeDocumentMoniker": "Lab5_2.cs",
+              "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab5_2.cs",
+              "RelativeToolTip": "Lab5_2.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAWwA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T05:33:55.671Z"
+              "WhenOpened": "2026-11-09T09:35:31.64Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Lab4_2.cs",
+              "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab4_2.cs",
+              "RelativeDocumentMoniker": "Lab4_2.cs",
+              "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab4_2.cs",
+              "RelativeToolTip": "Lab4_2.cs",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAuwBQBAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T09:16:28.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Helper.cs",
               "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Helper.cs",
               "RelativeDocumentMoniker": "Helper.cs",
               "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Helper.cs",
               "RelativeToolTip": "Helper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwAsAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T05:30:45.79Z"
+              "WhenOpened": "2026-09-18T05:30:45.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Lab6_1.cs",
+              "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab6_1.cs",
+              "RelativeDocumentMoniker": "Lab6_1.cs",
+              "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab6_1.cs",
+              "RelativeToolTip": "Lab6_1.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAMwDMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T08:17:50.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Lab.cs",
+              "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab.cs",
+              "RelativeDocumentMoniker": "Lab.cs",
+              "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab.cs",
+              "RelativeToolTip": "Lab.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-18T05:33:55.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\solod\\Documents\\dev\\labs\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAmwDMAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAuwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-18T05:04:10.273Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Lab2.cs",
               "DocumentMoniker": "C:\\Users\\solod\\Documents\\dev\\labs\\Lab2.cs",
               "RelativeDocumentMoniker": "Lab2.cs",
@@ -75,7 +135,8 @@
               "RelativeToolTip": "Lab2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-18T05:04:08.751Z"
+              "WhenOpened": "2026-09-18T05:04:08.751Z",
+              "EditorCaption": ""
             }
           ]
         }

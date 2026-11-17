@@ -1,0 +1,111 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace education_sharp;
+public class Lab6_1
+{
+
+}
+
+abstract class Employee
+{
+    public string Name { get; set; }
+    public DateTime DateOfEmployment { get; set; }
+    public double Salary { get; set; }
+
+    public string Say()
+    {
+        return Name;
+    }
+
+    public virtual double WorkTime()
+    {
+        return 0;
+    }
+
+    public abstract string WhatYouDo();
+}
+
+class Cashier : Employee
+{
+    private const string WhatDo = "Пополняю транспортные карты";
+
+    public override double WorkTime()
+    {
+        return (DateTime.UtcNow - DateOfEmployment).Days;
+    }
+
+    public override string WhatYouDo()
+    {
+        return WhatDo;
+    }
+}
+
+class Operator : Employee
+{
+    private const string WhatDo = "Ищу посылку";
+
+    public override double WorkTime()
+    {
+        var now = DateTime.UtcNow;
+        return (now.Year - DateOfEmployment.Year) * 12 + now.Month - DateOfEmployment.Month;
+    }
+
+    public override string WhatYouDo()
+    {
+        return WhatDo;
+    }
+}
+
+class Postman : Employee
+{
+    private const string WhatDo = "Разношу почту, не мешайте";
+
+    public override double WorkTime()
+    {
+        DateTime now = DateTime.Today;                  
+
+        int age = now.Year - DateOfEmployment.Year;
+
+        // Если день рождения в этом году еще не наступал, уменьшаем возраст на 1
+        if (DateOfEmployment.Date > now.AddYears(-age))
+        {
+            age--;
+        }
+
+        return age;
+    }
+
+    public override string WhatYouDo()
+    {
+        return WhatDo;
+    }
+}
+
+class PostOffice
+{
+    public List<Employee> Employees { get; set; }
+
+    public void Pool()
+    {
+        Console.WriteLine("А вас как зовут?");
+        foreach (var employee in Employees)
+        {
+            employee.Say();
+        }
+
+        Console.WriteLine("А что вы делаете?");
+        foreach (var employee in Employees)
+        {
+            employee.WhatYouDo();
+        }
+
+        Console.WriteLine("И давно вы тут работаете?");
+        foreach (var employee in Employees)
+        {
+            
+        }
+    }
+}
+

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -28,7 +29,7 @@ public static class Program
 
         try
         {
-            ExecuteLab4();
+            ExecuteLab6_2();
         }
         catch (Exception e)
         {
@@ -75,5 +76,111 @@ public static class Program
         Lab4.Task2();
         Lab4.Task3();
         Console.WriteLine(Lab4.Task4());
+    }
+
+    private static void ExecuteLab4_2()
+    {
+        // Lab4_2.Task1();
+        // Lab4_2.Task2();
+        // Lab4_2.Task3();
+        // Lab4_2.Task4();
+        // Lab4_2.Task5();
+        // Lab4_2.Task6();
+        // Lab4_2.Task7();
+        // Lab4_2.Task8();
+        Lab4_2.Task9();
+    }
+
+    private static void ExecuteLab5()
+    {
+        string name = Console.ReadLine() ?? throw new Exception("Имя не может быть пустым");
+        int age = Helper.TryParseStringToInt(Console.ReadLine(), false);
+        var cat = new Cat(name, age);
+
+        while (cat.Health > 0)
+        {
+            Console.WriteLine("Выберите действие: 1 - покормить, 2 - наказать, 3 - поиграть, 4 - выйти");
+            string input = Console.ReadLine() ?? throw new Exception("Ввод не может быть пустым");
+            int action = Helper.TryParseStringToInt(input, false);
+
+            switch (action)
+            {
+                case 1:
+                    Console.WriteLine("Введите количество еды:");
+                    int foodAmount = Helper.TryParseStringToInt(Console.ReadLine(), false);
+                    cat.Feed(foodAmount);
+                    Console.WriteLine($"Имя: {cat.Name}, Возраст: {cat.Age}, Здоровье: {cat.Health}, Настроение: {cat.Mood}, Цвет: {cat.Color}");
+                    break;
+                case 2:
+                    Console.WriteLine("Введите количество урона:");
+                    int punishmentAmount = Helper.TryParseStringToInt(Console.ReadLine(), false);
+                    cat.Punish(punishmentAmount);
+                    Console.WriteLine($"Имя: {cat.Name}, Возраст: {cat.Age}, Здоровье: {cat.Health}, Настроение: {cat.Mood}, Цвет: {cat.Color}");
+                    break;
+                case 3:
+                    Console.WriteLine("Введите количество настроения:");
+                    int moodCount = Helper.TryParseStringToInt(Console.ReadLine(), false);
+                    cat.Play(moodCount);
+                    Console.WriteLine($"Имя: {cat.Name}, Возраст: {cat.Age}, Здоровье: {cat.Health}, Настроение: {cat.Mood}, Цвет: {cat.Color}");
+                    break;
+                case 4:
+                    return;
+                default:
+                    Console.WriteLine("Неверный выбор действия.");
+                    break;
+            }
+        }
+
+        Console.WriteLine($"Цвет кота: {cat.Color}");
+    }
+
+    private static void ExecuteLab5_2()
+    {
+        Lab5_2.Start();
+    }
+
+    private static void ExecuteLab5_3()
+    {
+        var car = new Car();
+
+        car.Navigator();
+        car.ChangeDirection(Direction.Left);
+        car.Navigator();
+
+        car.ChangeColor(Color.Blue);
+        Console.WriteLine($"Цвет автомобиля: {car.GetColor()}");
+
+        car.UpgradeCar(100);
+        Console.WriteLine($"Расстояние за 2 часа: {car.ReturnDistance(2)} км");
+
+        const string vin = "1HGBH41JXMN109186";
+        const string vin2 = "1HGBH41JXMN109186_";
+        if (Car.IsValidVin(vin) || !Car.IsValidVin(vin2))
+        {
+            Console.WriteLine("Валидация VIN работает корректно");
+        }
+
+        Console.WriteLine($"Расход топлива: {Car.CalculateFuelConsumption(500, 40)} л/100 км");
+        Console.WriteLine($"Класс двигателя 1.2 л: {Car.GetEngineClass(1.2)}");
+        Console.WriteLine($"Класс двигателя 1.6 л: {Car.GetEngineClass(1.6)}");
+        Console.WriteLine($"Класс двигателя 2.5 л: {Car.GetEngineClass(2.5)}");
+    }
+
+    private static void ExecuteLab6_1()
+    {
+        var postOffice = new PostOffice(new List<Employee>
+        {
+            new Cashier("Анна", DateTime.UtcNow.AddDays(-120), 45000),
+            new Operator("Иван", DateTime.UtcNow.AddMonths(-18), 55000) ,
+            new Postman("Петр", DateTime.UtcNow.AddYears(-5), 40000)
+        });
+
+        postOffice.Pool();
+        postOffice.Stat();
+    }
+
+    private static void ExecuteLab6_2()
+    {
+        new ArenaGame().Start();
     }
 }
